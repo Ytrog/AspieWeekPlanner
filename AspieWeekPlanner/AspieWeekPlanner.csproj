@@ -58,6 +58,8 @@
     <Compile Include="DropSurface.xaml.cs">
       <DependentUpon>DropSurface.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PlanningItem.cs" />
+    <Compile Include="PlanningWeight.cs" />
     <Compile Include="WeekPriorities.xaml.cs">
       <DependentUpon>WeekPriorities.xaml</DependentUpon>
     </Compile>

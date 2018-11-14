@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <DockPanel>
-            <StackPanel DockPanel.Dock="Left">
+            <StackPanel DockPanel.Dock="Left" Orientation="Vertical">
                 <!--Here will be the toolbox-->
             </StackPanel>
             <StackPanel Orientation="Horizontal">

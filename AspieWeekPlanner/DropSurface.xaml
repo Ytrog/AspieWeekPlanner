@@ -8,6 +8,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="150" d:DesignWidth="150">
     <Grid>
-        <StackPanel Orientation="Vertical" AllowDrop="True" Drop="StackPanel_Drop"></StackPanel>
+        <StackPanel Orientation="Vertical" AllowDrop="True" Drop="StackPanel_Drop" Background="White"></StackPanel>
     </Grid>
 </UserControl>

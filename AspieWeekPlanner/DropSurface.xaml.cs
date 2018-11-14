@@ -25,9 +25,34 @@ namespace AspieWeekPlanner
             InitializeComponent();
         }
 
+
+        /// <summary>
+        /// The max weight that can be dropped on this surface
+        /// </summary>
+        public PlanningWeight MaxPlanningWeight
+        {
+            get { return (PlanningWeight)GetValue(MaxPlanningWeightProperty); }
+            set { SetValue(MaxPlanningWeightProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for MaxPlanningWeight.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty MaxPlanningWeightProperty =
+            DependencyProperty.Register("MaxPlanningWeight", typeof(PlanningWeight), typeof(DropSurface), new PropertyMetadata(PlanningWeight.Heavy));
+
+
+        /// <summary>
+        /// How much weight is already allocated
+        /// </summary>
+        public PlanningWeight TotalPlanningWeight { get; set; }
+
+        /// <summary>
+        /// Handle the drop event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void StackPanel_Drop(object sender, DragEventArgs e)
         {
-
+            
         }
     }
 }
