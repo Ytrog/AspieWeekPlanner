@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="AspieWeekPlanner.PlanningItemControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AspieWeekPlanner"
+             Name="PlanningItemView"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="150">
+    <UserControl.Resources>
+        <Style TargetType="TextBox">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding PlanningItem.PlanningItemWeight, ElementName=PlanningItemView}" Value="3">
+                    <Setter Property="BorderBrush" Value="Red"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding PlanningItem.PlanningItemWeight, ElementName=PlanningItemView}" Value="2">
+                    <Setter Property="BorderBrush" Value="Yellow"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding PlanningItem.PlanningItemWeight, ElementName=PlanningItemView}" Value="1">
+                    <Setter Property="BorderBrush" Value="Green"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <TextBox Text="{Binding PlanningItem.Description, ElementName=PlanningItemView}"></TextBox>     
+    </Grid>
+</UserControl>

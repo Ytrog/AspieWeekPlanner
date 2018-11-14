@@ -59,6 +59,9 @@
       <DependentUpon>DropSurface.xaml</DependentUpon>
     </Compile>
     <Compile Include="PlanningItem.cs" />
+    <Compile Include="PlanningItemControl.xaml.cs">
+      <DependentUpon>PlanningItemControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PlanningWeight.cs" />
     <Compile Include="WeekPriorities.xaml.cs">
       <DependentUpon>WeekPriorities.xaml</DependentUpon>
@@ -86,6 +89,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PlanningItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WeekPriorities.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
