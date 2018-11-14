@@ -55,10 +55,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DropSurface.xaml.cs">
+      <DependentUpon>DropSurface.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WeekPriorities.xaml.cs">
       <DependentUpon>WeekPriorities.xaml</DependentUpon>
     </Compile>
     <Page Include="DayControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DropSurface.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
