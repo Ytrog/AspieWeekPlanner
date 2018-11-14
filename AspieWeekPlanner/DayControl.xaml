@@ -15,8 +15,8 @@
     </UserControl.Resources>
     <Grid>
         <StackPanel Orientation="Vertical">
-            <Label Content="{Binding Day, ElementName=DayWindow}" Height="auto"/>
-            <Label Style="{DynamicResource SubHeader}" >Prioriteit</Label>
+            <Label Content="{Binding Day, ElementName=DayWindow}" Style="{StaticResource Header}" Height="auto"/>
+            <Label Style="{StaticResource SubHeader}" >Prioriteit</Label>
             <TextBox Name="tbPriority" Height="150"></TextBox>
             <Rectangle Height="20" Fill="Blue"/>
             <TextBox Name="tbMorning"></TextBox>

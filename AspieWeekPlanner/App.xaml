@@ -9,5 +9,9 @@
             <Setter Property="FontStyle" Value="Italic"/>
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
+        <Style TargetType="Label" x:Key="Header">
+            <Setter Property="Background" Value="#9AC3D6"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
     </Application.Resources>
 </Application>
