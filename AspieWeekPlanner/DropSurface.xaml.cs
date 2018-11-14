@@ -46,6 +46,11 @@ namespace AspieWeekPlanner
         public PlanningWeight TotalPlanningWeight { get; set; }
 
         /// <summary>
+        /// The allocated planning items
+        /// </summary>
+        public List<PlanningItem> Items { get; set; }
+
+        /// <summary>
         /// Handle the drop event
         /// </summary>
         /// <param name="sender"></param>
