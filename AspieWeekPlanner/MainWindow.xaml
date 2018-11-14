@@ -13,6 +13,31 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <!--Here comes the planning-->
+                <StackPanel Orientation="Vertical">
+                    <!--Roles and goals-->
+                </StackPanel>
+                <Grid>
+                    <!--Priorities and tasks-->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    
+                </Grid>
             </StackPanel>
         </DockPanel>
 
