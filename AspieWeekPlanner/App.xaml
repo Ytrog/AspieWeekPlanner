@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:AspieWeekPlanner"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Label" x:Key="SubHeader">
+            <Setter Property="Background" Value="#c3d69b"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
     </Application.Resources>
 </Application>

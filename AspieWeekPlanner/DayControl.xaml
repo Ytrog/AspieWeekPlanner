@@ -11,11 +11,12 @@
         <Style TargetType="TextBox">
             <Setter Property="Height" Value="100"/>
         </Style>
+        
     </UserControl.Resources>
     <Grid>
         <StackPanel Orientation="Vertical">
             <Label Content="{Binding Day, ElementName=DayWindow}" Height="auto"/>
-            <Label>Prioriteit</Label>
+            <Label Style="{DynamicResource SubHeader}" >Prioriteit</Label>
             <TextBox Name="tbPriority" Height="150"></TextBox>
             <Rectangle Height="20" Fill="Blue"/>
             <TextBox Name="tbMorning"></TextBox>
