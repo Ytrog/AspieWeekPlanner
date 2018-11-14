@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel Orientation="Vertical">
             <Label Height="auto">Wekelijkse prioriteit</Label>
-            <TextBox Name="tbPriorities" Height="200" ></TextBox>
+            <TextBox Name="tbPriorities" Height="500" ></TextBox>
         </StackPanel>
     </Grid>
 </UserControl>
