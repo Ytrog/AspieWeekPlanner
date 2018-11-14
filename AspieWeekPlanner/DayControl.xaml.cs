@@ -33,7 +33,7 @@ namespace AspieWeekPlanner
 
         // Using a DependencyProperty as the backing store for Day.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty DayProperty =
-            DependencyProperty.Register("Day", typeof(string), typeof(DayControl), new PropertyMetadata(""));
+            DependencyProperty.Register("Day", typeof(string), typeof(DayControl), new PropertyMetadata("Maandag"));
 
 
     }

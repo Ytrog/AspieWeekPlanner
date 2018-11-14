@@ -4,13 +4,19 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AspieWeekPlanner"
+             Name="DayWindow"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="100"/>
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <StackPanel Orientation="Vertical">
-            <Label Content="{Binding Day}" Height="20"/>
+            <Label Content="{Binding Day, ElementName=DayWindow}" Height="auto"/>
             <Label>Prioriteit</Label>
-            <TextBox Name="tbPriority"></TextBox>
+            <TextBox Name="tbPriority" Height="150"></TextBox>
             <Rectangle Height="20" Fill="Blue"/>
             <TextBox Name="tbMorning"></TextBox>
             <TextBox Name="tbAfternoon"></TextBox>

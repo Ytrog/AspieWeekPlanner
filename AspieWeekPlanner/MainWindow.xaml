@@ -19,13 +19,13 @@
                 <StackPanel Orientation="Horizontal">
                     <!--Priorities and tasks-->
                     <local:WeekPriorities></local:WeekPriorities>
-                    <local:DayControl Day=""></local:DayControl>
-                    <local:DayControl Day=""></local:DayControl>
-                    <local:DayControl Day=""></local:DayControl>
-                    <local:DayControl Day=""></local:DayControl>
-                    <local:DayControl Day=""></local:DayControl>
-                    <local:DayControl Day=""></local:DayControl>
-                    <local:DayControl Day=""></local:DayControl>
+                    <local:DayControl Day="Maandag"></local:DayControl>
+                    <local:DayControl Day="Dinsdag"></local:DayControl>
+                    <local:DayControl Day="Woensdag"></local:DayControl>
+                    <local:DayControl Day="Donderdag"></local:DayControl>
+                    <local:DayControl Day="Vrijdag"></local:DayControl>
+                    <local:DayControl Day="Zaterdag"></local:DayControl>
+                    <local:DayControl Day="Zondag"></local:DayControl>
                 </StackPanel>
             </StackPanel>
         </DockPanel>
