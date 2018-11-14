@@ -4,11 +4,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AspieWeekPlanner"
+             Name="WeekPrioritiesWindow"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel Orientation="Vertical">
-            <Label Height="auto">Wekelijkse prioriteit</Label>
+            <Label Height="auto" Style="{StaticResource Header}">Wekelijkse prioriteit</Label>
             <TextBox Name="tbPriorities" Height="500" ></TextBox>
         </StackPanel>
     </Grid>
