@@ -39,6 +39,19 @@ namespace AspieWeekPlanner
         public static readonly DependencyProperty PlanningItemProperty =
             DependencyProperty.Register("PlanningItem", typeof(PlanningItem), typeof(PlanningItemControl), new PropertyMetadata(default(PlanningItem)));
 
-
+        /// <summary>
+        /// Initiate drag drop
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PlanningItemView_MouseMove(object sender, MouseEventArgs e)
+        {
+            PlanningItemControl control = sender as PlanningItemControl;
+            if (control != null && e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragDrop.DoDragDrop(control, control.PlanningItem, DragDropEffects.Copy);
+            }
+            
+        }
     }
 }
