@@ -10,8 +10,11 @@
         <StackPanel Orientation="Vertical">
             <Label Content="{Binding Day}" Height="20"/>
             <Label>Prioriteit</Label>
-            <TextBox></TextBox>
-            <Rectangle Height="20"/>
+            <TextBox Name="tbPriority"></TextBox>
+            <Rectangle Height="20" Fill="Blue"/>
+            <TextBox Name="tbMorning"></TextBox>
+            <TextBox Name="tbAfternoon"></TextBox>
+            <TextBox Name="tbEvening"></TextBox>
         </StackPanel>   
     </Grid>
 </UserControl>
