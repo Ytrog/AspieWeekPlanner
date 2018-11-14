@@ -38,6 +38,13 @@
                     </Grid.RowDefinitions>
                     <Label Grid.Column="0" Grid.Row="0">Wekelijkse prioriteit</Label>
                     <TextBox Grid.Column="0" Grid.Row="1" Grid.RowSpan="5"></TextBox>
+                    <Label Grid.Column="1" Grid.Row="0">Maandag</Label>
+                    <Label Grid.Column="2" Grid.Row="0">Dinsdag</Label>
+                    <Label Grid.Column="3" Grid.Row="0">Woensdag</Label>
+                    <Label Grid.Column="4" Grid.Row="0">Donderdag</Label>
+                    <Label Grid.Column="5" Grid.Row="0">Vrijdag</Label>
+                    <Label Grid.Column="6" Grid.Row="0">Zaterdag</Label>
+                    <Label Grid.Column="7" Grid.Row="0">Zondag</Label>
                 </Grid>
             </StackPanel>
         </DockPanel>
