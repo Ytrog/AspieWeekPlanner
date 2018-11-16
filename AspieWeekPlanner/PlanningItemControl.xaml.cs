@@ -23,8 +23,10 @@ namespace AspieWeekPlanner
         public PlanningItemControl()
         {
             InitializeComponent();
+            PlanningItem = new PlanningItem() { Description = string.Empty, Weight = InitialPlanningWeight }; 
         }
 
+        public PlanningWeight InitialPlanningWeight { get; set; }
 
         /// <summary>
         /// The planning item
@@ -37,7 +39,7 @@ namespace AspieWeekPlanner
 
         // Using a DependencyProperty as the backing store for PlanningItem.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty PlanningItemProperty =
-            DependencyProperty.Register("PlanningItem", typeof(PlanningItem), typeof(PlanningItemControl), new PropertyMetadata(default(PlanningItem)));
+            DependencyProperty.Register("PlanningItem", typeof(PlanningItem), typeof(PlanningItemControl), new PropertyMetadata(new PlanningItem() {Description = string.Empty, Weight = PlanningWeight.Heavy }));
 
         /// <summary>
         /// Initiate drag drop

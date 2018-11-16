@@ -10,6 +10,12 @@
         <DockPanel>
             <StackPanel DockPanel.Dock="Left" Orientation="Vertical">
                 <!--Here will be the toolbox-->
+                <StackPanel.Resources>
+                    <Style TargetType="local:PlanningItemControl">
+                        <Setter Property="Width" Value="100"/>
+                    </Style>
+                </StackPanel.Resources>
+                <local:PlanningItemControl InitialPlanningWeight="Heavy"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <!--Here comes the planning-->
