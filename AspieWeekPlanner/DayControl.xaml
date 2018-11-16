@@ -6,12 +6,15 @@
              xmlns:local="clr-namespace:AspieWeekPlanner"
              Name="DayWindow"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="150">
     <UserControl.Resources>
         <Style TargetType="TextBox">
             <Setter Property="Height" Value="100"/>
         </Style>
-        
+        <Style TargetType="local:DropSurface">
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="BorderBrush" Value="#FFABADB3"/>
+        </Style>
     </UserControl.Resources>
     <Grid>
         <StackPanel Orientation="Vertical">
@@ -19,9 +22,9 @@
             <Label Style="{StaticResource SubHeader}" >Prioriteit</Label>
             <TextBox Name="tbPriority" Height="150"></TextBox>
             <Rectangle Height="20" Fill="Blue"/>
-            <TextBox Name="tbMorning"></TextBox>
-            <TextBox Name="tbAfternoon"></TextBox>
-            <TextBox Name="tbEvening"></TextBox>
+            <local:DropSurface x:Name="tbMorning"/>
+            <local:DropSurface x:Name="tbAfternoon"></local:DropSurface>
+            <local:DropSurface x:Name="tbEvening"></local:DropSurface>
         </StackPanel>   
     </Grid>
 </UserControl>
