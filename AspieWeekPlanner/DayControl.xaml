@@ -14,6 +14,8 @@
         <Style TargetType="local:DropSurface">
             <Setter Property="Height" Value="100"/>
             <Setter Property="BorderBrush" Value="#FFABADB3"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="White"/>
         </Style>
     </UserControl.Resources>
     <Grid>
