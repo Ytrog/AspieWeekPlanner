@@ -34,5 +34,20 @@ namespace AspieWeekPlanner
                 DragDrop.DoDragDrop(control, control.PlanningItem, DragDropEffects.Copy);
             }
         }
+
+        private void HeavyTask_MouseMove(object sender, MouseEventArgs e)
+        {
+            TemplateDragDrop(sender, e, PlanningWeight.Heavy);
+        }
+
+        private static void TemplateDragDrop(object sender, MouseEventArgs e, PlanningWeight planningWeight)
+        {
+            Rectangle control = sender as Rectangle;
+
+            if (MouseHelper.ValidateDragDrop(control, e))
+            {
+                DragDrop.DoDragDrop(control, planningWeight, DragDropEffects.Copy);
+            }
+        }
     }
 }
