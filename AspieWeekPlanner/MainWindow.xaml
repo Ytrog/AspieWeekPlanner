@@ -16,8 +16,8 @@
                     </Style>
                 </StackPanel.Resources>
                 <Rectangle Height="50" Fill="Red" Width="100" Name="HeavyTask" MouseMove="HeavyTask_MouseMove"></Rectangle>
-                <Rectangle Height="50" Fill="Yellow" Width="100" Name="MediumTask"></Rectangle>
-                <Rectangle Height="50" Fill="Green" Width="100" Name="LightTask"></Rectangle>
+                <Rectangle Height="50" Fill="Yellow" Width="100" Name="MediumTask" MouseMove="MediumTask_MouseMove"></Rectangle>
+                <Rectangle Height="50" Fill="Green" Width="100" Name="LightTask" MouseMove="LightTask_MouseMove"></Rectangle>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <!--Here comes the planning-->

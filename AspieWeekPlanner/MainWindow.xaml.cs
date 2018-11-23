@@ -35,6 +35,11 @@ namespace AspieWeekPlanner
             }
         }
 
+        /// <summary>
+        /// Drop a heavy task block onto a <see cref="DropSurface"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HeavyTask_MouseMove(object sender, MouseEventArgs e)
         {
             TemplateDragDrop(sender, e, PlanningWeight.Heavy);
@@ -48,6 +53,26 @@ namespace AspieWeekPlanner
             {
                 DragDrop.DoDragDrop(control, planningWeight, DragDropEffects.Copy);
             }
+        }
+
+        /// <summary>
+        /// Drop a medium task block onto a <see cref="DropSurface"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MediumTask_MouseMove(object sender, MouseEventArgs e)
+        {
+            TemplateDragDrop(sender, e, PlanningWeight.Medium);
+        }
+
+        /// <summary>
+        /// Drop a light task block onto a <see cref="DropSurface"/>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LightTask_MouseMove(object sender, MouseEventArgs e)
+        {
+            TemplateDragDrop(sender, e, PlanningWeight.Light);
         }
     }
 }
