@@ -23,10 +23,7 @@ namespace AspieWeekPlanner
         public PlanningItemControl()
         {
             InitializeComponent();
-            PlanningItem = new PlanningItem() { Description = string.Empty, Weight = InitialPlanningWeight }; 
         }
-
-        public PlanningWeight InitialPlanningWeight { get; set; }
 
         /// <summary>
         /// The planning item
