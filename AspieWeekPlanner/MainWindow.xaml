@@ -15,7 +15,9 @@
                         <Setter Property="Width" Value="100"/>
                     </Style>
                 </StackPanel.Resources>
-                <local:PlanningItemControl InitialPlanningWeight="Heavy" MouseMove="PlanningItemControl_MouseMove"/>
+                <Rectangle Height="50" Fill="Red" Width="100" Name="HeavyTask"></Rectangle>
+                <Rectangle Height="50" Fill="Yellow" Width="100" Name="MediumTask"></Rectangle>
+                <Rectangle Height="50" Fill="Green" Width="100" Name="LightTask"></Rectangle>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <!--Here comes the planning-->
