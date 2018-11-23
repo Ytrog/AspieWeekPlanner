@@ -9,6 +9,7 @@
              d:DesignHeight="50" d:DesignWidth="150">
     <UserControl.Resources>
         <Style TargetType="TextBox">
+            <Setter Property="BorderThickness" Value="3"/>
             <Style.Triggers>
                 <DataTrigger Binding="{Binding PlanningItem.PlanningItemWeight, ElementName=PlanningItemView}" Value="3">
                     <Setter Property="BorderBrush" Value="Red"/>
