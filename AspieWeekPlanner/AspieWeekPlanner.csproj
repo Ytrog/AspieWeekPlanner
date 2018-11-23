@@ -58,6 +58,7 @@
     <Compile Include="DropSurface.xaml.cs">
       <DependentUpon>DropSurface.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MouseHelper.cs" />
     <Compile Include="PlanningItem.cs" />
     <Compile Include="PlanningItemControl.xaml.cs">
       <DependentUpon>PlanningItemControl.xaml</DependentUpon>
