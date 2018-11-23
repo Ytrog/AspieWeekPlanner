@@ -11,7 +11,7 @@ namespace AspieWeekPlanner
     {
         public static bool ValidateDragDrop(object control, MouseEventArgs e)
         {
-            return control != null && e.LeftButton == MouseButtonState.Pressed;
+            return control != null && e?.LeftButton == MouseButtonState.Pressed;
         }
     }
 }
