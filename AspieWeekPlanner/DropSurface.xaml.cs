@@ -63,7 +63,9 @@ namespace AspieWeekPlanner
             if (CanAddWeight(weightAdded))
             {
                 spStack.Children.Add(new PlanningItemControl() { PlanningItem = new PlanningItem() { Weight = weightAdded } });
+                this.TotalPlanningWeight = AddPlanningWeights(this.TotalPlanningWeight, weightAdded);
             }
+            
         }
 
         /// <summary>
@@ -75,6 +77,26 @@ namespace AspieWeekPlanner
         {
             int newWeight = (int)this.TotalPlanningWeight + (int)planningWeight;
             return newWeight <= (int)PlanningWeight.Heavy;
+        }
+
+        /// <summary>
+        /// Add two <see cref="PlanningWeight"/> values with a max of <see cref="PlanningWeight.Heavy"/>.
+        /// Does not validate
+        /// </summary>
+        /// <param name="w1"></param>
+        /// <param name="w2"></param>
+        /// <returns></returns>
+        private static PlanningWeight AddPlanningWeights(PlanningWeight w1, PlanningWeight w2)
+        {
+            var wNew = (int)w1 + (int)w2;
+            if (wNew > (int)PlanningWeight.Heavy)
+            {
+                return PlanningWeight.Heavy;
+            }
+            else
+            {
+                return (PlanningWeight)wNew;
+            }
         }
     }
 }
