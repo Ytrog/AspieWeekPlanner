@@ -57,7 +57,24 @@ namespace AspieWeekPlanner
         /// <param name="e"></param>
         private void StackPanel_Drop(object sender, DragEventArgs e)
         {
-            
+            object source = sender;
+            var weightAdded = (PlanningWeight)e.Data.GetData(typeof(PlanningWeight));
+
+            if (CanAddWeight(weightAdded))
+            {
+                spStack.Children.Add(new PlanningItemControl() { PlanningItem = new PlanningItem() { Weight = weightAdded } });
+            }
+        }
+
+        /// <summary>
+        /// Can the weight be added without becoming more than heavy total
+        /// </summary>
+        /// <param name="planningWeight"></param>
+        /// <returns></returns>
+        private bool CanAddWeight(PlanningWeight planningWeight)
+        {
+            int newWeight = (int)this.TotalPlanningWeight + (int)planningWeight;
+            return newWeight <= (int)PlanningWeight.Heavy;
         }
     }
 }
