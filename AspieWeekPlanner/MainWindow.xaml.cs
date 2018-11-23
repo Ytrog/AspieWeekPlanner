@@ -24,5 +24,15 @@ namespace AspieWeekPlanner
         {
             InitializeComponent();
         }
+
+        private void PlanningItemControl_MouseMove(object sender, MouseEventArgs e)
+        {
+            PlanningItemControl control = sender as PlanningItemControl;
+
+            if (control != null && e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragDrop.DoDragDrop(control, control.PlanningItem, DragDropEffects.Copy);
+            }
+        }
     }
 }

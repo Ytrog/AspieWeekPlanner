@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:AspieWeekPlanner"
              Name="PlanningItemView"
              mc:Ignorable="d" 
-             d:DesignHeight="50" d:DesignWidth="150" MouseMove="PlanningItemView_MouseMove">
+             d:DesignHeight="50" d:DesignWidth="150">
     <UserControl.Resources>
         <Style TargetType="TextBox">
             <Style.Triggers>
