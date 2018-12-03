@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:AspieWeekPlanner"
+             xmlns:local="clr-namespace:AspieWeekPlanner"             
              Name="PlanningItemView"
              mc:Ignorable="d" 
              d:DesignHeight="50" d:DesignWidth="150">
@@ -11,13 +11,22 @@
         <Style TargetType="TextBox">
             <Setter Property="BorderThickness" Value="3"/>
             <Style.Triggers>
-                <DataTrigger Binding="{Binding PlanningItem.PlanningItemWeight, ElementName=PlanningItemView}" Value="3">
+                <DataTrigger Binding="{Binding PlanningItem.Weight, ElementName=PlanningItemView}">
+                    <DataTrigger.Value>
+                        <local:PlanningWeight>Heavy</local:PlanningWeight>
+                    </DataTrigger.Value>
                     <Setter Property="BorderBrush" Value="Red"/>
                 </DataTrigger>
-                <DataTrigger Binding="{Binding PlanningItem.PlanningItemWeight, ElementName=PlanningItemView}" Value="2">
+                <DataTrigger Binding="{Binding PlanningItem.Weight, ElementName=PlanningItemView}">
+                    <DataTrigger.Value>
+                        <local:PlanningWeight>Medium</local:PlanningWeight>
+                    </DataTrigger.Value>
                     <Setter Property="BorderBrush" Value="Yellow"/>
                 </DataTrigger>
-                <DataTrigger Binding="{Binding PlanningItem.PlanningItemWeight, ElementName=PlanningItemView}" Value="1">
+                <DataTrigger Binding="{Binding PlanningItem.Weight, ElementName=PlanningItemView}">
+                    <DataTrigger.Value>
+                        <local:PlanningWeight>Light</local:PlanningWeight>
+                    </DataTrigger.Value>
                     <Setter Property="BorderBrush" Value="Green"/>
                 </DataTrigger>
             </Style.Triggers>
