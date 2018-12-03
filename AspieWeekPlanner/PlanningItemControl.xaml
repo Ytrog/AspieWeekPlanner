@@ -21,7 +21,7 @@
                     <DataTrigger.Value>
                         <local:PlanningWeight>Medium</local:PlanningWeight>
                     </DataTrigger.Value>
-                    <Setter Property="BorderBrush" Value="Yellow"/>
+                    <Setter Property="BorderBrush" Value="#FFFFC800"/>
                 </DataTrigger>
                 <DataTrigger Binding="{Binding PlanningItem.Weight, ElementName=PlanningItemView}">
                     <DataTrigger.Value>
