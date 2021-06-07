@@ -21,9 +21,6 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <!--Here comes the planning-->
-                <StackPanel Orientation="Vertical">
-                    <!--Roles and goals-->
-                </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <!--Priorities and tasks-->
                     <local:WeekPriorities></local:WeekPriorities>
