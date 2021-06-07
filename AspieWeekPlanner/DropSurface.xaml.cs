@@ -98,5 +98,22 @@ namespace AspieWeekPlanner
                 return (PlanningWeight)wNew;
             }
         }
+
+        /// <summary>
+        /// Validate if the task isn't too heavy to be dropped
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SpStack_DragOver(object sender, DragEventArgs e)
+        {
+            object source = sender;
+            var weightAdded = (PlanningWeight)e.Data.GetData(typeof(PlanningWeight));
+
+            if (!CanAddWeight(weightAdded))
+            {
+                e.Effects = DragDropEffects.None;
+            }
+            
+        }
     }
 }
