@@ -19,20 +19,33 @@
                 <Rectangle Height="50" Fill="#FFFFC800" Width="100" Name="MediumTask" MouseMove="MediumTask_MouseMove"></Rectangle>
                 <Rectangle Height="50" Fill="Green" Width="100" Name="LightTask" MouseMove="LightTask_MouseMove"></Rectangle>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <!--Here comes the planning-->
-                <StackPanel Orientation="Horizontal">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" /> <!--For future expansion-->
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
                     <!--Priorities and tasks-->
-                    <local:WeekPriorities></local:WeekPriorities>
-                    <local:DayControl Day="Maandag"></local:DayControl>
-                    <local:DayControl Day="Dinsdag"></local:DayControl>
-                    <local:DayControl Day="Woensdag"></local:DayControl>
-                    <local:DayControl Day="Donderdag"></local:DayControl>
-                    <local:DayControl Day="Vrijdag"></local:DayControl>
-                    <local:DayControl Day="Zaterdag"></local:DayControl>
-                    <local:DayControl Day="Zondag"></local:DayControl>
-                </StackPanel>
-            </StackPanel>
+                    <local:WeekPriorities Grid.Column="0"/>
+                    <local:DayControl Day="Maandag" Grid.Column="1"/>
+                    <local:DayControl Day="Dinsdag" Grid.Column="2"/>
+                    <local:DayControl Day="Woensdag" Grid.Column="3"/>
+                    <local:DayControl Day="Donderdag" Grid.Column="4"/>
+                    <local:DayControl Day="Vrijdag" Grid.Column="5"/>
+                    <local:DayControl Day="Zaterdag" Grid.Column="6"/>
+                    <local:DayControl Day="Zondag" Grid.Column="7"/>
+                </Grid>
+                <!--Here comes the planning-->
+            </Grid>
         </DockPanel>
 
     </Grid>
