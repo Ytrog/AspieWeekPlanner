@@ -32,6 +32,11 @@
             </Style.Triggers>
         </Style>
     </UserControl.Resources>
+    <UserControl.ContextMenu>
+        <ContextMenu Name="ctxMenu">
+            <MenuItem Header="Delete" Name="cbtDelete" />
+        </ContextMenu>
+    </UserControl.ContextMenu>
     <Grid>
         <TextBox Text="{Binding PlanningItem.Description, ElementName=PlanningItemView}"></TextBox>     
     </Grid>
