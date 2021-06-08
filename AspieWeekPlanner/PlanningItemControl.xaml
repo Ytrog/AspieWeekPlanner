@@ -34,7 +34,7 @@
     </UserControl.Resources>
     <UserControl.ContextMenu>
         <ContextMenu Name="ctxMenu">
-            <MenuItem Header="Delete" Name="cbtDelete" />
+            <MenuItem Header="Delete" Name="cbtDelete" Click="CbtDelete_Click" />
         </ContextMenu>
     </UserControl.ContextMenu>
     <Grid>

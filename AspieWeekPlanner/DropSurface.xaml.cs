@@ -62,10 +62,19 @@ namespace AspieWeekPlanner
 
             if (CanAddWeight(weightAdded))
             {
-                spStack.Children.Add(new PlanningItemControl() { PlanningItem = new PlanningItem() { Weight = weightAdded } });
+                var planningItemControl = new PlanningItemControl() { PlanningItem = new PlanningItem() { Weight = weightAdded } };
+                planningItemControl.DeleteEvent += PlanningItemControl_DeleteEvent;
+                spStack.Children.Add(planningItemControl);
                 this.TotalPlanningWeight = AddPlanningWeights(this.TotalPlanningWeight, weightAdded);
             }
             
+        }
+
+        private void PlanningItemControl_DeleteEvent(object sender, EventArgs e)
+        {
+            PlanningItemControl planningItemControl = sender as PlanningItemControl;
+            spStack.Children.Remove(planningItemControl);
+            this.TotalPlanningWeight = SubtractPlanningWeights(this.TotalPlanningWeight, planningItemControl.PlanningItem.Weight);
         }
 
         /// <summary>
@@ -96,6 +105,19 @@ namespace AspieWeekPlanner
             else
             {
                 return (PlanningWeight)wNew;
+            }
+        }
+
+        private static PlanningWeight SubtractPlanningWeights(PlanningWeight w1, PlanningWeight w2)
+        {
+            var wNew = (int)w1 - (int)w2;
+            if (wNew >= 0)
+            {
+                return (PlanningWeight)wNew;
+            }
+            else
+            {
+                throw new ArgumentException($"Resulting weight not valid: {wNew}");
             }
         }
 

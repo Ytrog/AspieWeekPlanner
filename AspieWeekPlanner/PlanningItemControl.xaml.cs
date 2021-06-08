@@ -20,6 +20,8 @@ namespace AspieWeekPlanner
     /// </summary>
     public partial class PlanningItemControl : UserControl
     {
+        public event EventHandler DeleteEvent;
+        
         public PlanningItemControl()
         {
             InitializeComponent();
@@ -38,6 +40,14 @@ namespace AspieWeekPlanner
         public static readonly DependencyProperty PlanningItemProperty =
             DependencyProperty.Register("PlanningItem", typeof(PlanningItem), typeof(PlanningItemControl), new PropertyMetadata(new PlanningItem() {Description = string.Empty, Weight = PlanningWeight.Heavy }));
 
-        
+        private void CbtDelete_Click(object sender, RoutedEventArgs e)
+        {
+            OnDelete(e);
+        }
+
+        private void OnDelete(EventArgs e)
+        {
+            DeleteEvent?.Invoke(this, e);
+        }
     }
 }
